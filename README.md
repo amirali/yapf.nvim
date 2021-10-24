@@ -2,8 +2,13 @@
 NeoVim Yapf formatter plugin
 
 ## Requirements
+### Yapf
 ```bash
 pip install yapf
+```
+### plenary.nvim
+```lua
+use 'nvim-lua/plenary.nvim'
 ```
 
 ## Installation
@@ -11,9 +16,10 @@ pip install yapf
 -- using packer
 use {
   'amirali/yapf.nvim',
+  requires = {'nvim-lua/plenary.nvim'},
   config = function()
     require('yapf').setup {}
-  end
+  end,
 }
 ```
 
@@ -25,7 +31,7 @@ use {
       command = 'custom_yapf_command',
       style = 'your_preferred_style_or_path_to_config_file',
     }
-  end
+  end,
 ...
 ```
 
