@@ -21,7 +21,7 @@ function M.format()
   local style = M.config.style
   local bufnr = vim.api.nvim_get_current_buf()
 
-  vim.command.write()
+  vim.cmd('write')
 
   local job = Job:new {
     command = M.config.command,
