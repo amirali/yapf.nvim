@@ -39,7 +39,6 @@ function M.format()
   end
 
   vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, output)
-  vim.command.write()
 end
 
 return M
